@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function square(stars) {
+            var result = '';
+            var star = '*';
+            var space = '&nbsp&nbsp';
+            var lineBreak = '<br>';
+            for (i = 1; i <= stars; i++) {
+                for (j = 1; j <= stars; j++) {
+                    if (i === 1 || i === stars) {
+                        result = result + space + star;
+                    } else {
+                        if (j === 1 || j=== stars) {
+                            result = result + space + star;
+                        } else {
+                            result = result + space + space;
+                        }
+                    }
+                    if (j === stars) {
+                        result += lineBreak;
+                    }
+                }
+            }
+            return result;
+        }
+        document.write(square(10));
+    </script>
+</body>
+
+</html>
